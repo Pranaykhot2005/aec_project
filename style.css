@@ -1,0 +1,164 @@
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #ffffff;
+    color: #160000;
+}
+
+/* Navbar styles */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+}
+
+.navbar .nav-links {
+    list-style-type: none;
+}
+
+.navbar .nav-links li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar .nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Hero section styles */
+.hero-section {
+    background-image: url('hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: hsl(0, 0%, 0%);
+}
+
+.hero-section p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.hero-section button {
+    background-color: #f05f40;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.hero-section button:hover {
+    background-color: #d9534f;
+}
+
+/* Property listings section styles */
+.properties-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.properties-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.property-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.property-item {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    margin: 10px;
+}
+
+.property-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.property-item h3 {
+    font-size: 1.5em;
+    margin-top: 10px;
+}
+
+.property-item p {
+    margin: 5px 0;
+}
+
+/* Contact section styles */
+.contact-section {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.contact-section form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-section label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-section button {
+    background-color: #e33812;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.contact-section button:hover {
+    background-color: #9a3838;
+}

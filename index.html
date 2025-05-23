@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN PAGE</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        body {
+            background-image: url('https://zeevector.com/wp-content/uploads/Clipart/City-Vector-Line-art.png'); 
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed; 
+            margin: 0; 
+            font-family: Arial, sans-serif; 
+            color: #fff; 
+        }
+
+        .button-link {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button-link:hover {
+            background-color: #0056b3;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #contact {
+            margin: 20px;
+            background: rgba(0, 0, 0, 0.5);  
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>WELCOME TO OUR REAL ESTATE WEBSITE</h1>
+
+    <section id="contact" class="contact-section">
+        <h2>FILL THE DETAILS</h2>
+        <form id="contactForm" onsubmit="return validateForm(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="number">Mobile Number:</label>
+            <input type="text" id="number" required>
+
+            <button type="submit" class="button-link">REGISTER</button>
+        </form>
+    </section>
+
+    <script>
+        function validateForm(event) {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const number = document.getElementById('number').value;
+
+            if (name.trim() === '') {
+                alert('Please enter your name.');
+                return false;
+            }
+
+            const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+
+            const numberPattern = /^[0-9]{10}$/;
+            if (!numberPattern.test(number)) {
+                alert('Please enter a valid 10-digit mobile number.');
+                return false;
+            }
+
+            event.preventDefault();
+
+            window.location.href = 'home.html'; 
+            return true;
+        }
+    </script>
+
+</body>
+</html>
